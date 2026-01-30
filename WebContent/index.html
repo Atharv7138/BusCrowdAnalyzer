@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bus Crowd Analyzer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#f7f7fb,#fdfbff);
+    color:#222;
+    min-height:100vh;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#ffffff;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+.navbar-brand{
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#7a3cff!important;
+}
+.nav-link{
+    font-weight:500;
+    color:#333!important;
+    margin-left:15px;
+}
+.nav-link:hover{
+    color:#7a3cff!important;
+}
+
+/* HERO */
+.hero{
+    padding:90px 0 60px;
+}
+.hero h1{
+    font-size:46px;
+    font-weight:700;
+}
+.hero span{
+    color:#7a3cff;
+}
+.hero p{
+    font-size:18px;
+    color:#555;
+}
+
+/* GLASS CARD */
+.glass{
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 25px 45px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+.glass:hover{
+    transform:translateY(-8px);
+}
+
+/* ACTION CARDS */
+.action i{
+    font-size:42px;
+    color:#7a3cff;
+}
+.action h4{
+    margin-top:15px;
+    font-weight:600;
+}
+.action p{
+    color:#555;
+}
+.action a{
+    display:inline-block;
+    margin-top:12px;
+    padding:10px 26px;
+    border-radius:30px;
+    background:#7a3cff;
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+}
+.action a:hover{
+    background:#5b2ecc;
+}
+
+/* IMAGE */
+.hero-img{
+    border-radius:20px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.12);
+}
+
+/* FOOTER */
+footer{
+    background:#ffffff;
+    text-align:center;
+    padding:18px;
+    font-size:14px;
+    color:#777;
+    box-shadow:0 -5px 15px rgba(0,0,0,0.05);
+}
+
+@media(max-width:768px){
+    .hero h1{font-size:32px;}
+    .navbar-brand{font-size:22px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR WITH OPTIONS -->
+<nav class="navbar navbar-expand-lg navbar-light px-lg-5">
+    <a class="navbar-brand" href="#">Bus Crowd Analyzer</a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <div class="navbar-nav">
+          <!-- <a class="nav-link" href="index.html">🏠 Home</a> -->
+            <a class="nav-link" href="AdminLogin.html">🧑‍💻Admin</a>
+            <a class="nav-link" href="BDepotlogin.html">🚌Bus Depot</a>
+            <a class="nav-link" href="user_login.jsp">👤User Login</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+<div class="container">
+<div class="row align-items-center">
+
+    <div class="col-lg-6">
+        <h1>Smart <span>Bus Crowd</span><br>Monitoring System</h1>
+        <p class="mt-3">
+            A real-time intelligent transport solution that monitors
+            passenger crowd density using IoT and analytics to ensure
+            safe, efficient, and comfortable commuting.
+        </p>
+    </div>
+
+    <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+        <img src="img/bus_crowd.jpg" class="img-fluid hero-img" alt="Bus Crowd">
+    </div>
+
+</div>
+</div>
+</section>
+
+<!-- OPTIONS IN CONTENT -->
+<section class="container py-5">
+<div class="row text-center">
+
+    <div class="col-md-4 mb-4">
+        <div class="glass action">
+            <i class="fas fa-user-shield"></i>
+            <h4>Admin Panel</h4>
+            <p>Control depots, analytics, and system configuration.</p>
+            <a href="AdminLogin.html">Login</a>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="glass action">
+            <i class="fas fa-warehouse"></i>
+            <h4>Bus Depot</h4>
+            <p>Manage buses, routes, and crowd monitoring.</p>
+            <a href="BDepotlogin.html">Access</a>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="glass action">
+            <i class="fas fa-user"></i>
+            <h4>User Portal</h4>
+            <p>View live crowd status and plan travel.</p>
+            <a href="user_login.jsp">Login</a>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Bus Crowd Analyzer | Smart Transport System
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

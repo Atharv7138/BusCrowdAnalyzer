@@ -1,0 +1,101 @@
+/* Logout */
+.profile-menu .logout {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+
+
+a:hover{
+text-decoration: none; 
+    color: darkblue;      
+    }
+
+
+/* Profile container aligned right */
+.profile-container {
+    position: relative;
+    margin-left: 20px;
+}
+
+/* Profile icon */
+.profile-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #8b5cf6;
+}
+
+/* Dropdown card */
+.profile-dropdown {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 260px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(124, 58, 237, 0.25);
+    display: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Show dropdown on hover 
+.profile-container:hover .profile-dropdown {
+    display: block;
+}
+*/
+
+
+
+/* SHOW dropdown (JS controlled) */
+.profile-dropdown.show {
+    display: block;
+}
+
+/* Profile header */
+.profile-header {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.profile-header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 8px;
+}
+
+.profile-header h4 {
+    margin: 5px 0 2px;
+    font-size: 18px;
+}
+
+.profile-header p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Menu items */
+.profile-menu {
+    padding: 8px 0;
+}
+
+.profile-menu a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #374151;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.profile-menu a:hover {
+    background: #f3f4f6;
+    padding-left: 25px;
+    color: #7c3aed;
+}

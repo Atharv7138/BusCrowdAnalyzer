@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="BusCrowdAnalyzer">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="gson-2.10.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/gson-2.10.1/gson-2.10.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mysql-connector-java-8.0.30.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/mysql-connector-java-8.0.30/mysql-connector-java-8.0.30">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="RXTXcomm.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/RXTXcomm/RXTXcomm">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jSerialComm-2.10.4.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jSerialComm-2.10.4/jSerialComm-2.10.4">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mysql (1).jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/mysql (1)/mysql (1)">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="BusCrowdAnalyzer"/>
+        <property name="java-output-path" value="/BusCrowdAnalyzer/build/classes"/>
+    </wb-module>
+</project-modules>

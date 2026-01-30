@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Add Route | Bus Depot Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- PROFILE CSS -->
+<link href="css/profile.css" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#7a3cff;
+    --bg:#f4f6fb;
+    --dark:#1f1f2e;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+}
+
+/* NAVBAR */
+.navbar{
+    background:#fff;
+    box-shadow:0 6px 25px rgba(0,0,0,.08);
+    border-bottom:4px solid var(--primary);
+}
+.navbar-brand{
+    font-weight:700;
+    color:var(--primary)!important;
+}
+
+/* PAGE LAYOUT */
+.page-wrapper{
+    margin-top:30px;
+}
+
+/* LEFT PANEL */
+.left-panel{
+    background:linear-gradient(180deg,#ffffff,#f2ecff);
+    border-radius:18px;
+    padding:30px;
+    height:100%;
+    box-shadow:0 25px 50px rgba(0,0,0,.08);
+}
+.left-panel h4{
+    font-weight:700;
+}
+.left-panel p{
+    font-size:14px;
+    color:#555;
+}
+.step{
+    display:flex;
+    align-items:flex-start;
+    margin-top:18px;
+}
+.step span{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-right:12px;
+}
+.step small{
+    color:#555;
+}
+
+/* FORM PANEL */
+.form-panel{
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 25px 60px rgba(122,60,255,.18);
+}
+
+.form-panel h5{
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+/* FORM */
+.form-group label{
+    font-size:13px;
+    font-weight:500;
+    color:#444;
+}
+.form-control{
+    height:48px;
+    border-radius:10px;
+    font-size:14px;
+}
+.form-control:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 2px rgba(122,60,255,.15);
+}
+
+/* BUTTON */
+.btn-save{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:12px;
+    font-weight:600;
+}
+.btn-save:hover{
+    background:#5f2fd6;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    font-size:13px;
+    color:#777;
+    padding:12px;
+    margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .left-panel{
+        margin-bottom:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light">
+<div class="container">
+    <a class="navbar-brand" href="#">Bus Depot Panel</a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+         <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="BusDepotDashboard.html" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="ViewRoute.jsp" class="nav-link">View Route</a></li>
+            <li class="nav-item"><a href="ViewBuses.jsp" class="nav-link">View Bus</a></li>
+            <li class="nav-item"><a href="AssignRoute.jsp" class="nav-link">Assign Bus</a></li>
+            <li class="nav-item"><a href="ViewExtraBuses.jsp" class="nav-link">Extra Buses</a></li>
+            <li class="nav-item"><a class="nav-link active" href="ViewRescheduling.jsp">Rescheduled Buses</a></li>
+
+        </ul>
+    </div>
+</div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container page-wrapper">
+<div class="row">
+
+    <!-- LEFT INFO -->
+    <div class="col-lg-4">
+        <div class="left-panel">
+            <h4>Route Configuration</h4>
+            <p>
+                Define routes carefully. This data is used for bus assignment,
+                crowd monitoring and rescheduling decisions.
+            </p>
+
+            <div class="step">
+                <span>1</span>
+                <small>Enter route identification details</small>
+            </div>
+
+            <div class="step">
+                <span>2</span>
+                <small>Specify stops and locations</small>
+            </div>
+
+            <div class="step">
+                <span>3</span>
+                <small>Save route to system</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="col-lg-8">
+        <div class="form-panel">
+
+            <h5>Add New Route</h5>
+
+            <form action="AddingRoute" method="post">
+
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label>Route Number</label>
+                        <input type="text" name="number" class="form-control" placeholder="Eg: 102A" required>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label>Route Name</label>
+                        <input type="text" name="rname" class="form-control" placeholder="Eg: City Loop" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Stops (comma separated)</label>
+                    <input type="text" name="stop" class="form-control" placeholder="Stop1, Stop2, Stop3" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label>Start Location</label>
+                        <input type="text" name="slocation" class="form-control" placeholder="Starting point" required>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label>End Location</label>
+                        <input type="text" name="elocation" class="form-control" placeholder="Ending point" required>
+                    </div>
+                </div>
+
+                <button class="btn btn-save btn-block mt-3">
+                    <i class="fas fa-save mr-2"></i>Save Route
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<footer>
+    © 2026 BusCrowd Analyzer | Bus Depot Panel
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
